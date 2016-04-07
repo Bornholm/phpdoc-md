@@ -33,6 +33,7 @@ $positional = array();
 $named = array(
     'lt' => '%c.md',
     'index' => 'ApiIndex.md',
+    'templates' => dirname(__DIR__) . '/templates/'
 );
 
 for ($i = 0; $i < count($arguments); $i++) {
@@ -64,7 +65,7 @@ echo "Parsing structure.xml\n";
 
 $classDefinitions = $parser->run();
 
-$templateDir = dirname(__DIR__) . '/templates/';
+$templateDir = $named['templates'];
 
 $generator = new PHPDocMD\Generator(
     $classDefinitions,

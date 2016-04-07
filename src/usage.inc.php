@@ -14,3 +14,6 @@ Options:
     --lt [template]
         This specifies the 'template' for links we're generating. By default
         this is "%c.md".
+    --templates [templatesDir]
+        This specifies the path to the templates directory. By default this
+        is phpdoc-md/templates
